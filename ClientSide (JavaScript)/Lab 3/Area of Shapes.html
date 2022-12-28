@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+</head>
+<body>
+<script>
+
+    var x=prompt("Enter The Shape\n-c:  circle\n-t:  triangle\n-sq:  square\n-Rect:  Rectangle\n-Para:  Parallelogram",x) ;
+
+        var area =0  ;
+        var r =0 , h=0 , b = 0 , w = 0 , a=0 ;
+
+    while(x!= null && h!=null && r!=null && b!=null && a!=null && w!=null ){
+     
+        switch(x){
+            /*-------  circle -------*/
+            case'c':
+            r=prompt("enter The Radius",r);
+            area=r**2 *3.14 ;
+            alert(`area of circle = ${area}`)
+            x=prompt("Enter The Shape\n-c:  circle\n-t:  triangle\n-sq:  square\n-Rect:  Rectangle\n-Para:  Parallelogram",x)  ;
+            break ;
+           
+            /*-------  triangle -------*/
+            case't':
+            var b=prompt("enter The base",b);
+            var h=prompt("enter The height",h);
+            area= 0.5 * h * b
+            alert(`area of Triangle = ${area}`)
+            x=prompt("Enter The Shape\n-c:  circle\n-t:  triangle\n-sq:  square\n-Rect:  Rectangle\n-Para:  Parallelogram",x)  ;
+            break ;
+
+            /*-------  square -------*/
+            case'sq':
+            var a=prompt("enter The length of side",a);
+            area= a**2 
+            alert(`area of square = ${area}`)
+            x=prompt("Enter The Shape\n-c:  circle\n-t:  triangle\n-sq:  square\n-Rect:  Rectangle\n-Para:  Parallelogram",x)  ;
+            break ;
+
+            /*-------  rectangle -------*/
+            case'Rect':
+            var l=prompt("enter The Length",l);
+            var w=prompt("enter The Width",w);
+            area= l * w ;
+            alert(`area of circle = ${area}`)
+            x=prompt("Enter The Shape\n-c:  circle\n-t:  triangle\n-sq:  square\n-Rect:  Rectangle\n-Para:  Parallelogram",x)  ;
+            break ;
+
+            /*-------  Parallelogram -------*/
+            case'Para':
+            var h=prompt("enter The height",h);
+            var b=prompt("enter The base",b);
+            area= b * h ;
+            alert(`area of circle = ${area}`)
+            x=prompt("Enter The Shape\n-c:  circle\n-t:  triangle\n-sq:  square\n-Rect:  Rectangle\n-Para:  Parallelogram",x)  ;
+            break ;
+        }
+    }
+</script>    
+</body>
+</html>

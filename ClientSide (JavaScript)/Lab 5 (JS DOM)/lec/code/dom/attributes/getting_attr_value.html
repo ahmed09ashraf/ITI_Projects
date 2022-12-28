@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a href="https://www.google.com/" target="_blank" id="myLink">Google</a>
+      <script>
+        // Selecting the element by ID attribute
+        var link = document.getElementById("myLink");
+        // // Getting the attributes values
+        var href = link.getAttribute("href");
+        alert(href); // Outputs: https://www.google.com/
+        var target = link.getAttribute("target");
+        alert(target); // Outputs: _blank
+    </script>
+  </body>
+</html>

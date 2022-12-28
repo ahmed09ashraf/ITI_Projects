@@ -1,0 +1,215 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Event Capturing Demo</title>
+<style>
+    div, p, a{
+        padding: 15px 30px;
+        display: block;
+        border: 2px solid #000;
+        background: #fff;
+    }
+</style>
+</head>
+<body>
+<div id="wrap">DIV
+    <p class="hint">P
+        <a href="#">A</a>
+</p>
+</div>
+<script>
+    function showTagName() {
+        alert("Capturing: "+ this.tagName);
+    }
+    var elems = document.querySelectorAll("div, p, a");
+    for(let elem of elems) {
+        elem.addEventListener("click", showTagName, true);
+    }
+  </script>
+</body>
+</html> -->
+
+<!-- The Bubbling Phase -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Event Bubbling Demo</title>
+<style type="text/css">
+    div, p, a{
+        padding: 15px 30px;
+        display: block;
+        border: 2px solid #000;
+        background: #fff;
+} </style>
+</head>
+<body>
+  <div onclick="alert('Bubbling: ' + this.tagName)">DIV
+    <p onclick="alert('Bubbling: ' + this.tagName)">P
+    <a href="#" onclick="alert('Bubbling: ' + this.tagName)">A</a>
+</p> </div>
+</body>
+</html> -->
+
+<!-- Accessing the Target Element -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Event Target Demo</title>
+<style type="text/css">
+div, p, a{
+padding: 15px 30px;
+        display: block;
+        border: 2px solid #000;
+        background: #fff;
+} </style>
+</head>
+<body>
+<div id="wrap">DIV
+    <p class="hint">P
+        <a href="#">A</a>
+
+      </p> </div>
+      <script>
+      // event.target = element = generate event
+      // this = ref = element = event
+          // Selecting the div element
+          var div = document.getElementById("wrap");
+          // Attaching an onclick event handler
+          div.onclick = function(event) {
+              event.target.style.backgroundColor = "lightblue";
+              // Let the browser finish rendering of background color before showing alert
+              //
+              setTimeout(() => {
+                  alert("target = " + event.target.tagName + ", this = " + this.tagName);
+                  event.target.style.backgroundColor = ''
+      }, 0); }
+      </script>
+      </body>
+      </html> -->
+
+<!-- Stopping the Event Propagation -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Event Propagation Demo</title>
+<style type="text/css">
+div, p, a{
+        padding: 15px 30px;
+        display: block;
+        border: 2px solid #000;
+        background: #fff;
+} </style>
+</head>
+<body>
+<div id="wrap">DIV
+    <p class="hint">P
+        <a href="#">A</a>
+</p> </div>
+<script>
+    function showAlert() {
+        alert("You clicked: "+ this.tagName);
+    }
+    var elems = document.querySelectorAll("div, p, a");
+      for(let elem of elems) {
+          elem.addEventListener("click", showAlert);
+      }
+</script>
+  </body>
+  </html> -->
+
+  <!-- <!DOCTYPE html>
+  <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Stop Event Propagation Demo</title>
+  <style type="text/css">
+      div, p, a{
+          padding: 15px 30px;
+          display: block;
+          border: 2px solid #000;
+          background: #fff;
+  } </style>
+  </head>
+  <body>
+  <div id="wrap">DIV
+      <p class="hint">P
+          <a href="#">A</a>
+  </p> </div>
+  <script>
+      function showAlert(event) {
+          alert("You clicked: "+ this.tagName);
+          event.stopPropagation();
+      }
+      var elems = document.querySelectorAll("div, p, a");
+   for(let elem of elems) {
+       elem.addEventListener("click", showAlert);
+   }
+</script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stop Immediate Propagation Demo</title>
+<style type="text/css">
+    div, p, a{
+        padding: 15px 30px;
+        display: block;
+        border: 2px solid #000;
+        background: #fff;
+} </style>
+</head>
+<body>
+<div onclick="alert('You clicked: ' + this.tagName)">DIV
+    <p onclick="alert('You clicked: ' + this.tagName)">P
+        <a href="#" id="link">A</a>
+</p> </div>
+<script>
+    function sayHi() {
+        alert("Hi, there!");
+        event.stopImmediatePropagation();
+    }
+    function sayHello() {
+        alert("Hello World!");
+}
+    // Attaching multiple event handlers to hyperlink
+
+    var link = document.getElementById("link");
+       link.addEventListener("click", sayHi);
+       link.addEventListener("click", sayHello);
+   </script>
+   </body>
+   </html> -->
+
+   <!-- Preventing the Default Action -->
+
+   <!-- <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="utf-8">
+   <title>Prevent Default Demo</title>
+</head>
+   <body>
+   <form action="/examples/html/action.php" method="post" id="users">
+       <label>First Name:</label>
+       <input type="text" name="first-name" id="firstName">
+       <input type="submit" value="Submit" id="submitBtn">
+   </form>
+   <script>
+       var btn = document.getElementById("submitBtn");
+
+       btn.addEventListener("click", function(event) {
+    var name = document.getElementById("firstName").value;
+    alert("Sorry, " + name + ". The preventDefault() won't let you submit this form!");
+    event.preventDefault(); // Prevent form submission
+});
+</script>
+</body>
+</html> -->

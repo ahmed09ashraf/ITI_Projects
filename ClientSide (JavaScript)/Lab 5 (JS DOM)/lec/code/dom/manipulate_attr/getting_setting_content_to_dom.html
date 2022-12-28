@@ -1,0 +1,52 @@
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="main">
+    <h1 id="title">Hello World!</h1>
+    <p id="hint">This is a simple paragraph.</p>
+</div>
+    <script>
+    // Getting inner HTML conents
+    var contents = document.getElementById("main").innerHTML;
+    alert(contents); // Outputs inner html contents
+    // Setting inner HTML contents
+    var mainDiv = document.getElementById("main");
+    mainDiv.innerHTML = "<p>This is <em>newly inserted</em> paragraph.</p>";
+    </script>
+  </body>
+</html> -->
+
+
+<!-- Insert without replace content -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- beforebegin -->
+<div id="main">
+    <!-- afterbegin -->
+    <h1 id="title">Hello World!</h1>
+    <!-- beforeend -->
+</div>
+<!-- afterend -->
+<script>
+    // Selecting target element
+    var mainDiv = document.getElementById("main");
+    // Inserting HTML just before the element itself, as a previous sibling
+    mainDiv.insertAdjacentHTML('beforebegin', '<p>This is paragraph one.</p>');
+    // // Inserting HTML just inside the element, before its first child
+    mainDiv.insertAdjacentHTML('afterbegin', '<p>This is paragraph two.</p>');
+    // // Inserting HTML just inside the element, after its last child
+    mainDiv.insertAdjacentHTML('beforeend', '<p>This is paragraph three.</p>');
+    // // Inserting HTML just after the element itself, as a next sibling
+    mainDiv.insertAdjacentHTML('afterend', '<p>This is paragraph four.</p>');
+</script>
+  </body>
+</html>

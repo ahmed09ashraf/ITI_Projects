@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+function checkCookieEnabled() {
+    if(navigator.cookieEnabled) {
+        alert("Cookies are enabled in your browser.");
+    } else {
+        alert("Cookies are disabled in your browser.");
+} }
+</script>
+<button type="button" onclick="checkCookieEnabled();">Check If Cookies are Enabled</button>
+  <!-- Detecting the Browser Language -->
+  <script>
+function checkLanguage() {
+    alert("Your browser's UI language is: " +
+navigator.language);
+}
+</script>
+<button type="button" onclick="checkLanguage();">Check Language</button>
+
+<!-- Getting Browser Name and Version Information -->
+<script>
+function getBrowserInformation() {
+     var info = "\n App Name: " + navigator.appName;
+        info += "\n App Version: " + navigator.appVersion;
+        info += "\n App Code Name: " + navigator.appCodeName;
+        info += "\n User Agent: " + navigator.userAgent;
+        info += "\n Platform: " + navigator.platform;
+   alert("Here're the information related to your browser: " + info);
+} </script>
+<button type="button" onclick="getBrowserInformation();">Get Browser Information</button>
+
+
+<!-- Check Whether the Browser is Java Enabled or Not  -->
+
+<script>
+function checkJavaEnabled() {
+    if(navigator.javaEnabled()) {
+        alert("Your browser is Java enabled.");
+    } else {
+        alert("Your browser is not Java enabled.");
+} }
+</script>
+<button type="button" onclick="checkJavaEnabled();">Check If Java is Enabled</button>
+  </body>
+</html>

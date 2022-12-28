@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- Detect Whether the Browser is Online or Offline -->
+    <!-- <script>
+function checkConnectionStatus() {
+    if(navigator.onLine) {
+        alert("Application is online.");
+} else {
+        alert("Application is offline.");
+} }
+</script>
+<button type="button" onclick="checkConnectionStatus();">Check Connection Status</button> -->
+
+
+<!-- attach event -->
+<script>
+function goOnline() {
+    // Action to be performed when your application goes
+online
+    alert("And we're back!");
+}
+function goOffline() {
+    // Action to be performed when your application goes
+offline
+    alert("Hey, it looks like you're offline.");
+}
+// Attaching event handler for the online event
+window.addEventListener("online", goOnline);
+// Attaching event handler for the offline event
+window.addEventListener("offline", goOffline);
+</script>
+<p>Toggle your internet connection on/off to see how it works.</p>
+  </body>
+</html>

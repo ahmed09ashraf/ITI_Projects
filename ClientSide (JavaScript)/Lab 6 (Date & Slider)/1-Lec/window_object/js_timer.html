@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- Executing Code After a Delay -->
+    <!-- <script>
+function myFunction() {
+    alert('Hello World!');
+}
+</script>
+<button onclick="setTimeout(myFunction, 2000)">Click Me</button> -->
+
+<!-- Executing Code at Regular Intervals -->
+
+<!-- <script>
+function showTime() {
+    var d = new Date();
+    document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+  }
+  setInterval(showTime, 1000);
+  </script>
+<p>The current time on your computer is: <span id="clock"></span></p> -->
+
+<!-- Stopping Code Execution or Cancelling a Timer -->
+
+<!-- <script>
+var timeoutID;
+function delayedAlert() {
+  timeoutID = setTimeout(showAlert, 2000);
+}
+function showAlert() {
+  alert('This is a JavaScript alert box.');
+}
+function clearAlert() {
+  clearTimeout(timeoutID);
+} </script>
+<button onclick="delayedAlert();">Show Alert After Two Seconds</button>
+<button onclick="clearAlert();">Cancel Alert Before It Display</button> -->
+
+
+<script>
+var intervalID;
+function showTime() {
+    var d = new Date();
+    document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+}
+function stopClock() {
+    clearInterval(intervalID);
+}
+var intervalID = setInterval(showTime, 1000);
+</script>
+<p>The current time on your computer is: <span id="clock"></span></p>
+<button onclick="stopClock();">Stop Clock</button>
+  </body>
+</html>

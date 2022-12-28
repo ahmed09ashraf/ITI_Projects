@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <!-- <button type="button" onclick="windowSize();">Get Window Size</button>
+
+    <script>
+function windowSize(){
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    alert("Width: " + w + ", " + "Height: " + h);
+} </script> -->
+<!-- find out the width and height of the window excluding the scrollbars -->
+<script>
+function windowSize(){
+    var w = document.documentElement.clientWidth;
+    var h = document.documentElement.clientHeight;
+    alert("Width: " + w + ", " + "Height: " + h);
+} </script>
+<button type="button" onclick="windowSize();">Get Window Size</button>
+  </body>
+</html>

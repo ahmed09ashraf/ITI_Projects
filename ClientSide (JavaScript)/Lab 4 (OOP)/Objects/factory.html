@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+   /* ---------------- factory function ----------------*/   
+
+    function User (fullname , money , sleepMode , healthRate){
+        
+            this.fn = fullname || 'ahmed' ;
+            this.m = 1000 ;
+            this.sl = sleepMode ;
+            this.h = healthRate ;
+        
+        
+    }
+    
+    
+    User.prototype.sleep= function (hours) {
+        if(!isNaN(hours)){
+    
+            if(hours ==7){
+                this.sl = 'happy' ;
+              return  'happy';  
+        }
+            else if(hours < 7){
+                this.sl = 'tired' ;
+                return 'tired' ;
+        }
+            else if (hours >7){
+                this.sl = 'lazy' ;
+                return 'lazy' ;
+        }
+        else{
+            return this.sl ;
+        }
+                } 
+    }
+    
+    User.prototype.eat= function (meals) {
+        if(!isNaN(meals)){
+            if(meals >=3){
+                this.h = '100% Healthy'  ;
+               return '100% Healthy' ;  
+        }
+            else if(meals == 2){
+                this.h = '75% Healthy'  ;
+                return '75% Healthy' ;
+        }
+            else if (meals == 1){
+                this.h = '50% Healthy'  ;
+                return '50% Healthy' ;
+        }
+        else{
+            return this.h ;
+        }
+                } 
+    }
+    
+    User.prototype.buy= function (items) {
+        if(!isNaN(items)){
+            this.m = this.m - 10 * items ;
+            return this.m ;
+               
+    }
+    }
+    
+    
+        let user = new User() ;
+        
+    
+    console.log(user.fn) ;
+    console.log(user.sleep(7)) ;
+    console.log(user.eat(5)) ;
+    console.log(user.buy(5)) ;
+    console.log(user) ;
+    console.log(user.buy(5)) ;
+
+    </script> 
+</body>
+</html>

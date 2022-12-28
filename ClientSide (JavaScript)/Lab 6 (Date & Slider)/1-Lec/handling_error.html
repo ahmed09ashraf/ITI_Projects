@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+        /*
+        try {
+            // Code that may cause an error
+            } catch(error) {
+            // Action to be performed when an error occurs
+            }
+        */
+      // try {
+      //   var greet = "Hi, there!";
+      //   document.write(greet);
+      //   // Trying to access a non-existent variable
+      //   document.write(welcome);
+      // // If error occurred following line won't execute
+      //   alert("All statements are executed successfully.");
+      // } catch(error) {
+      //     // Handle the error
+      //   alert("Caught error: " + error.message);
+      // }
+      // // // Continue execution
+      // document.write("<p>Hello World!</p>");
+
+      // catch finally
+      // Assigning the value returned by the prompt dialog box to a variable
+        var num = Number(prompt("Enter a positive integer between 0 to 100"));
+        // // // Storing the time when execution start
+        var start = Date.now();
+        try {
+            if(num > 0 && num <= 100) {
+                alert(Math.pow(num, num)); // the base to the exponent power
+            } else {
+                throw new Error("An invalid value is entered!");
+        }
+        } catch(e) {
+            alert(e.message);
+        } finally {
+            // Displaying the time taken to execute the code
+            alert("Execution took: " + (Date.now() - start) + "ms");
+        }
+
+        // throw
+        // throw 123;
+        // throw "Missing values!";
+        // throw true;
+        // throw { name: "InvalidParameter", message: "Parameter is
+        // not a number!" };
+        // throw new Error("Something went wrong!");
+        //
+        // //
+        // function squareRoot(number) {
+        // // Throw error if number is negative
+        //   if(number < 0) {
+        //           throw new Error("Sorry, can't calculate square root
+        //   of a negative number.");
+        //       } else {
+        //           return Math.sqrt(number);
+        //       }
+        //   }
+          // try {
+          //     squareRoot(16);
+          //
+          //     squareRoot(625);
+          //     squareRoot(-9);
+          //     squareRoot(100);
+          //     // If error is thrown following line won't execute
+          //     alert("All calculations are performed successfully.");
+          // } catch(e) {
+          //     // Handle the error
+          //     alert(e.message);
+          // }
+
+          //RangeError
+          // var num = 12.735;
+          // num.toFixed(200); // throws a range error (allowable range from 0 to 100)
+          // var array = new Array(-1); // throws a range error
+          // //ReferenceError
+          // var firstName = "Harry";
+          // console.log(firstname); // throws a reference error (variable names are case-sensitive)
+          // undefinedObj.getValues(); // throws a reference error
+          // nonexistentArray.length; // throws a reference error
+
+          // //SyntaxError
+          // var array = ["a", "b", "c"];
+          // document.write(array.slice(2); // throws a syntax error(missing bracket)
+          // alert("Hello World!'); // throws a syntax error (quote mismatch)
+          //
+          // //TypeError
+          // var num = 123;
+          // num.toLowerCase(); /* throws a type error (since
+          // toLowerCase() is a string method, a number can't be
+          // converted to lowercase) */
+          // var greet = "Hello World!"
+          // greet.join() // throws a type error (since join() is an array method)
+          //
+          // //URIError
+          //
+          // var a = "%E6%A2%B";
+          // decodeURI(a);  // throws a URI error
+          // var b = "\uD800";
+          // encodeURI(b);   // throws a URI error
+          //
+          // //
+          // var num = prompt("Please enter a number");
+          // try {
+          //     if(num != "" && num !== null && isFinite(+num)) {
+          //         alert(Math.exp(num));
+          //     } else {
+          //       throw new TypeError("You have not entered a number.");
+          //     }
+          // } catch(e) {
+          // alert(e.name);
+          // alert(e.message);
+          // alert(e.stack); // non-standard property
+          // }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // Creating a Date Object
+      // new Date
+      // var d = new Date();
+      // document.write(d);
+
+
+      //The new Date(year, month, ...) Syntax
+      // var d = new Date(2018,0,31,14,35,20,50);
+      // document.write(d);
+
+      //The new Date(dateString) Syntax
+      // var d = new Date("31 January 2018");
+      // document.write(d);
+
+      //The new Date(milliseconds) Syntax
+      // var d = new Date(1517356800000);
+      // document.write(d);
+
+      //Getting the Current Date and Time
+      // var now = new Date();
+      // alert(now); // Display the current date and time
+
+      //Creating the Date and Time Strings
+      // var d = new Date();
+      // alert(d.toDateString()); // Display an abbreviated date string
+      // // //
+      // alert(d.toLocaleDateString()); // Display a localized date string
+      // alert(d.toISOString()); // Display the ISO standardized date string
+      // alert(d.toUTCString()); // Display a date string converted to UTC time
+      // alert(d.toString()); // Display the full date string with local time zone
+
+
+      // var d = new Date();
+      // alert(d.toTimeString()); // Display the time portion of the date
+      // alert(d.toLocaleTimeString()); // Display a localized timestring
+
+      //Getting the Year, Month and Date
+      // var d = new Date();
+      // // // Extracting date part
+      // alert(d.getDate()); // Display the day of the month
+      // alert(d.getDay()); // Display the number of days into the week (0-6)
+      // alert(d.getMonth()); // Display the number of months into the year (0-11)
+      // alert(d.getFullYear()); // Display the full year (four digits)
+
+      //Getting the Hours, Minutes, Seconds, and Milliseconds
+      // var d = new Date();
+      // // // Extracting time part
+      // alert(d.getHours()); // Display the number of hours into the day (0-23)
+      // alert(d.getMinutes()); // Display the number of minutes into the hour (0-59)
+      // alert(d.getSeconds()); // Display the seconds into the minute (0-59)
+      // // alert(d.getMilliseconds()); // Display the number of milliseconds into second (0-999)
+      // alert(d.getTime()); // Display the number of milliseconds since 1/1/1970
+      // alert(d.getTimezoneOffset()); // Display the time-zone offset (from Greenwich Mean Time) in minutes
+
+      //Setting the Year, Month and Date
+      // var d = new Date();
+      // d.setFullYear(d.getFullYear() + 2);
+      // alert(d); // Display future date
+
+      var d = new Date(); // Current date and time
+      d.setMonth(0); // Sets month to 0, January
+      document.write(d);
+
+
+      // var d = new Date(2018, 5, 24); // June 24, 2018
+      // d.setMonth(12); // Sets month to 12, new date will be January 24, 2019
+      // document.write(d);
+      //
+
+      // var d = new Date(2018, 5, 24); // June 24, 2018
+      // d.setDate(15); // Sets date to 15, new date will be June 15, 2018
+      // document.write(d)
+
+      //
+      // var d = new Date(2018, 5, 24); // June 24, 2018
+      // d.setDate(36); // Sets day to 36, new date will be July 6, 2018
+      // document.write(d);
+
+      //Setting the Hours, Minutes and Seconds
+      // var d = new Date(2018, 5, 24); // June 24, 2018 00:00:00
+      // d.setHours(8);
+      // d.setMinutes(30);
+      // d.setSeconds(45);
+      // d.setMilliseconds(600);
+      // document.write(d);
+
+    </script>
+  </body>
+</html>
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //date 1/1/2020 12/20/2020 12-20-2020
+        //timestamp
+        //console.log(Date);
+
+        //var mydate = new Date(1612166464000);
+        // var mydate = new Date(2020,10,21,11,12,13);
+        // document.write(mydate);
+        // console.log({mydate});
+        //
+        // alert(mydate.toString())
+
+        function updateWatch(){
+            var watch = document.getElementById("watch");
+            watch.innerHTML = (new Date()).toLocaleTimeString();
+        }
+
+        //
+        //
+        //
+        setInterval(updateWatch,1000);
+    </script>
+</head>
+<body>
+    <div id="watch" style="font-size: 30px;">
+
+    </div>
+</body>
+</html> -->

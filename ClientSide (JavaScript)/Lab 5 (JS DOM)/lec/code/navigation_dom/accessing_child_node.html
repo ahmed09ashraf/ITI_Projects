@@ -1,0 +1,181 @@
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <div id="main">
+    <h1 id="title">My Heading</h1>
+    <p id="hint"><span>This is some text.</span></p>
+  </div>
+  <script>
+    var main = document.getElementById("main");
+    console.log(main.firstChild.nodeName); // Prints: #text
+    var hint = document.getElementById("hint");
+    console.log(hint.firstChild.nodeName); // Prints: SPAN
+  </script>
+  </body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <div id="main">
+    <h1 id="title">My Heading</h1>
+    <p id="hint"><span>This is some text.</span></p>
+</div>
+  <script>
+    var main = document.getElementById("main");
+    alert(main.firstElementChild.nodeName); // Outputs: H1
+    main.firstElementChild.style.color = "red";
+    var hint = document.getElementById("hint");
+    alert(hint.firstElementChild.nodeName); // Outputs: SPAN
+    hint.firstElementChild.style.color = "blue";
+  </script>
+  </body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="main">
+      <h1 id="title">My Heading</h1>
+      <p id="hint"><span>This is some text.</span></p>
+  </div>
+  <script>
+  var main = document.getElementById("main");
+  // First check that the element has child nodes
+  if(main.hasChildNodes()) {
+    var nodes = main.childNodes;
+    // Loop through node list and display node name
+    for(var i = 0; i < nodes.length; i++) {
+        alert(nodes[i].nodeName);
+} }
+  </script>
+  </body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="main">
+    <h1 id="title">My Heading</h1>
+    <p id="hint"><span>This is some text.</span></p>
+</div>
+<script>
+var main = document.getElementById("main");
+// First check that the element has child nodes
+if(main.hasChildNodes()) {
+    var nodes = main.children;
+    // Loop through node list and display node name
+    for(var i = 0; i < nodes.length; i++) {
+        alert(nodes[i].nodeName);
+} }
+</script>
+  </body>
+</html> -->
+
+
+<!-- Accessing the Parent Nodes -->
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <div id="main">
+    <h1 id="title">My Heading</h1>
+    <p id="hint"><span>This is some text.</span></p>
+</div>
+    <script>
+      var hint = document.getElementById("hint");
+      alert(hint.parentNode.nodeName); // Outputs: DIV
+      alert(document.documentElement.parentNode.nodeName); //
+      Outputs: #document
+      alert(document.parentNode); // Outputs: null
+    </script>
+  </body>
+</html> -->
+
+<!-- get only element nodes you can use the parentElement -->
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <div id="main">
+    <h1 id="title">My Heading</h1>
+    <p id="hint"><span>This is some text.</span></p>
+</div>
+  <script>
+    var hint = document.getElementById("hint");
+    alert(hint.parentNode.nodeName); // Outputs: DIV
+    hint.parentNode.style.backgroundColor = "yellow";
+  </script>
+    </script>
+  </body>
+</html> -->
+
+<!-- Accessing the Sibling Nodes -->
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <div id="main">
+    <h1 id="title">My Heading</h1>
+    <p id="hint"><span>This is some text.</span></p><hr>
+  </div>
+    <script>
+      var title = document.getElementById("title");
+      alert(title.previousSibling.nodeName); // Outputs: #text
+      var hint = document.getElementById("hint");
+      alert(hint.nextSibling.nodeName); // Outputs: HR
+    </script>
+  </body>
+</html>   -->
+
+<!-- skipping any whitespace -->
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <div id="main">
+    <h1 id="title">My Heading</h1>
+    <p id="hint"><span>This is some text.</span></p>
+</div>
+  <script>
+    var hint = document.getElementById("hint");
+    alert(hint.previousElementSibling.nodeName); // Outputs: H1
+    alert(hint.previousElementSibling.textContent); // Outputs: My Heading
+    var title = document.getElementById("title");
+    alert(title.nextElementSibling.nodeName); // Outputs: P
+    alert(title.nextElementSibling.textContent); // Outputs: This is some text.
+  </script>
+  </body>
+</html> -->

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button id="myBtn">Click Me</button>
+    <div id="result"></div>
+<script>
+      // Defining custom functions
+      function firstFunction() {
+          alert("The first function executed successfully!");
+      }
+      function secondFunction() {
+          alert("The second function executed successfully");
+      }
+      // // // Selecting button element
+      var btn = document.getElementById("myBtn");
+      // // // Assigning event handlers to the button
+      // btn.onclick = firstFunction;
+      // btn.onclick = secondFunction; // This one overwrite the first
+      // //
+      // // // sign multi event
+      // // // Assigning event listeners to the button
+      // btn.addEventListener("click", firstFunction);
+      // btn.addEventListener("click", secondFunction);
+      // target.addEventListener(event, function, useCapture)
+
+      //Adding Event Listeners for Different Event Types
+      // Defining custom functions
+      // function sayHello() {
+      //     alert("Hi, how are you doing?");
+      // }
+      // function setHoverColor() {
+      //     btn.style.background = "yellow";
+      // }
+      // function setNormalColor() {
+      //     btn.style.background = "";
+      // }
+      // // // // Assigning event listeners to the button
+      // btn.addEventListener("click", sayHello);
+      // btn.addEventListener("mouseover", setHoverColor);
+      // btn.addEventListener("mouseout", setNormalColor);
+
+      // //Adding Event Listeners to Window Object
+      // function displayWindowSize() {
+      // var w = window.innerWidth;
+      // var h = window.innerHeight;
+      //     var size = "Width: " + w + ", " + "Height: " + h;
+      //     document.getElementById("result").innerHTML = size;
+      // }
+      // // // Attaching the event listener function to window's resize event
+      // window.addEventListener("resize", displayWindowSize);
+
+
+      // //Removing Event Listeners
+      // // Defining function
+      // function greetWorld() {
+      //   alert("Hello World!");
+      // }
+      // // //
+      // // // // Attaching event listener
+      // btn.addEventListener("click", greetWorld);
+      // // // // Removing event listener
+      // btn.removeEventListener("click", greetWorld);
+
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <script>
+        // Global variable
+        // var counter  = 0;
+  // // //       // A function dedicated to manipulate the 'counter' variable
+  //       function makeCounter() {
+  //         return counter += 1;
+  //       }
+  // // //       // Calling the function
+  //       makeCounter();
+  //       console.log(counter); // Prints: 1
+  //       makeCounter();
+  //       console.log(counter); // Prints: 2
+  // // // //       // Trying to manipulate the 'counter' variable from outside
+  //       counter = 10;
+  //       console.log(counter); // Prints: 10
+  //
+  //       //local
+  //       function makeCounter() {
+  // //       // Local variable
+  //           var counter  = 0;
+  // //           // Manipulating the 'counter' variable
+  //           return counter += 1;
+  //       }
+  // // //       // Calling the function
+  //       console.log(makeCounter()); // Prints: 1
+  //       console.log(makeCounter()); // Prints: 1
+  //
+        //closure can solve our problem
+  //       function makeCounter() {
+  //         var counter = 0;
+  // //         // Nested function
+  //         function inner() {
+  //             counter += 1;
+  //             return counter;
+  //         }
+  //         return inner;
+  //       }
+  // // // //       /* Execute the makeCounter() function and store the
+  // // // //       returned value in the myCounter variable */
+  //       var innerFunction = makeCounter();
+  //       console.log(innerFunction()); // Prints: 1
+  //       console.log(innerFunction()); // Prints: 2
+  //
+  //
+  //       //
+  //       // Anonymous function expression
+      //   var myCounter = (function() {
+      //     var counter = 0;
+      //     // Nested anonymous function
+      //     return function() {
+      //         counter += 1;
+      //         return counter;
+      //     }
+      // })();
+      // console.log(myCounter()); // Prints: 1
+      // console.log(myCounter()); // Prints: 2
+  // //
+  //     //Creating the Getter and Setter Functions
+  //     var getValue, setValue;
+  //     // Self-executing function
+  //     (function() {
+  //         var secret = 0;
+  //         // Getter function
+  //     getValue = function() {
+  //             return secret;
+  //     };
+  //     // Setter function
+  //     setValue = function(x) {
+  //       if(typeof x === "number") {
+  //           secret = x;
+  //   }
+  //   };
+  // }());
+  // //   // Calling the functions
+  //   getValue(); // Returns: 0
+  //   setValue(10);
+  //   getValue(); // Returns: 10
+  //   setValue(null);
+  //   getValue(); // Returns: 10
+      </script>
+  </body>
+</html>

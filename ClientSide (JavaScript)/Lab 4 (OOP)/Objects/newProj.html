@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+var List = [];
+        var X = true;
+
+    const Employee ={
+        id: "ahmed",
+        salary :1000,
+        m:1000,
+        email : "ahmed@gmail",
+        w :"workMode",
+        sl :"sleepMode",
+        isManager: "healthRate",
+
+        work:function(hoursW){
+            if(!isNaN(hoursW)){
+                
+                if(hoursW ==8){
+                    this.w = 'happy' ;
+                return  'happy';  
+            }
+                else if(hoursW < 8){
+                    this.w = 'tired' ;
+                    return 'tired' ;
+            }
+                else if (hoursW >8){
+                    this.w = 'lazy' ;
+                    return 'lazy' ;
+            }
+            else{
+                return this.w ;
+            }
+                    } 
+        },
+        
+        
+    
+        sleep : function (hours) {
+            if(!isNaN(hours)){
+        
+                if(hours ==7){
+                    this.sl = 'happy' ;
+                return  'happy';  
+            }
+                else if(hours < 7){
+                    this.sl = 'tired' ;
+                    return 'tired' ;
+            }
+                else if (hours >7){
+                    this.sl = 'lazy' ;
+                    return 'lazy' ;
+            }
+            else{
+                return this.sl ;
+            }
+                    } 
+        },
+    
+        eat: function  (meals) {
+            if(!isNaN(meals)){
+                if(meals >=3){
+                    this.h = '100% Healthy'  ;
+                return '100% Healthy' ;  
+            }
+                else if(meals == 2){
+                    this.h = '75% Healthy'  ;
+                    return '75% Healthy' ;
+            }
+                else if (meals == 1){
+                    this.h = '50% Healthy'  ;
+                    return '50% Healthy' ;
+            }
+            else{
+                return this.h ;
+            }
+                    } 
+        },
+    
+        
+        buy:  function (items) {
+            if(!isNaN(items)){
+                this.m = this.m - 10 * items ;
+                return this.m ;
+                
+        }
+        }
+    }
+
+    const office ={
+        name : "name",
+        employees:"employees",
+    }
+    function hire(name,age){
+        List.push({name,age})
+    }
+    function fire(id){
+        List[id].pop()
+    }
+    function getAllEmployees(){
+        document.write(List.length);
+    }
+    function getEmployee(id){
+        document.write(List[id]);
+    }
+
+    
+        do {
+            var input = prompt(" -Enter Position [mngr , employee] \n\n- quit");
+
+            if (input == "employee") {
+
+                addNew();
+            }
+            if (input == "mngr") {
+                Mngr();
+            }
+            if (input == "nrml") {
+                Nrml();
+            }
+            if (input == "quit") {
+                X = false;
+            }
+
+        } while (X)
+
+        function addNew() {
+         
+            var   name= prompt("Enter Name");
+            var   age= prompt(" Enter Age "); 
+               var pos = "employee";
+            List.push({name , age , pos});
+        }
+        function Mngr() {
+                var name = prompt("enter name");
+                var age = prompt("enter age");
+                var pos = "manager";
+                List.push({name , age , pos});
+    }   
+         
+                
+            
+        
+    
+       
+    console.log(Employee.sleep(7)) ;
+    console.log(Employee.eat(1)) ;
+    console.log(Employee.buy(30)) ;
+    console.log(Employee.work(8)) ;
+    console.log(List.length) ;
+    console.log(List) ;
+
+    
+
+</script>
+
+</body>
+</html>

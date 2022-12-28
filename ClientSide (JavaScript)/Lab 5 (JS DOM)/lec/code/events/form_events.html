@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- <input type="text" onfocus="highlightInput(this)">
+    <button type="button">Button</button> -->
+    <!-- onfocus -->
+    <!--
+    The value of this keyword inside an event handler refers to the element
+    which has the handler on it
+    (i.e. where the event is currently being delivered).
+    -->
+    <!-- <script>
+    function highlightInput(elm){
+      console.log(elm);
+        elm.style.background = "yellow";
+    }
+  </script> -->
+
+    <!-- onblur -->
+    <!-- <input type="text" onblur="alert('Text input loses focus!')">
+    <button type="button">Submit</button> -->
+
+    <!-- onchange -->
+    <!-- <select onchange="alert('You have changed the selection!');">
+      <option>Select</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select> -->
+
+    <!-- onsubmit -->
+  <form action="action.php" method="post" onsubmit="alert('Form data will be submitted to the server!');">
+    <label>First Name:</label>
+    <input type="text" name="first-name" required>
+    <input type="submit" value="Submit">
+  </form>
+
+  </body>
+</html>

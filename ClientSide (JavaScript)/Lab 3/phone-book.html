@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone</title>
+</head>
+<body>
+
+
+    <script>
+
+       var x=prompt ("Enter your operation \n- Add \n- Search \n- Exit",x);
+       var  contacts =[] ;
+        
+        while (x!=0) {
+
+            switch(x){
+                case'add' :
+                    function addContact() {
+                        var contact={
+                            name   :  prompt("The name to save ",n)  ,
+                            number :  prompt("The number to save",num)  
+                                    }
+                                    contctlist.push(contacts);
+                    }
+                    addContact()
+
+                    break ;
+
+                case 'search' :
+                    function searchContact() {
+
+                    }
+                    break ;
+
+                case 'exit' :
+                    app =false ;  
+            }
+        }
+
+
+        
+       
+
+
+
+
+
+
+
+        var n=prompt("The name to save ",n) ;
+               var num=prompt("The number to save",num)
+                var contact={
+                    name   :  n  ,
+                    number :  num  
+                }
+                alert(contact.name + '   ' +    contact.number)
+                // x=prompt ("Enter your operation",x);
+                 document.write('name :  ' + contact.name ,'   ' +'<br>'+  'number :  '+contact.number)
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB</title>
+</head>
+<body>
+<style>
+
+.container {
+    display: flex ;
+    justify-content :center
+}
+p{
+    font-weight: bolder;
+}
+
+.rgb{
+    border :5px solid black ;
+    padding :5px ;
+    width :250px ;
+    display :block ;
+}
+</style>
+<div class="container">
+    <div class="rgb">
+    <p style="color:red">Red:</p>
+    <input type="range" min="0" max="255" value="255" value="44" id="RedCol">
+    <hr>
+    <p style="color:green">Green:</p>
+    <input type="range" min="0" max="255" value="255" id="GreenCol">
+    <hr>
+    <p style="color:blue">Blue:</p>
+    <input type="range" min="0" max="255" value="255" id="BlueCol">
+
+    </div>
+</div>
+
+    
+    <script>
+        var red      = document.getElementById("RedCol") ;
+        var green    = document.getElementById("GreenCol")
+        var blue     = document.getElementById("BlueCol");
+
+        var BgColor = function (){
+            document.body.style.backgroundColor =`rgb(${red.value},${green.value},${blue.value})` ;
+        } ;
+
+
+        red.addEventListener("mousemove",BgColor) ;
+        green.addEventListener("mousemove",BgColor) ;
+        blue.addEventListener("mousemove",BgColor) ;
+
+
+
+
+    </script>
+</body>
+</html>

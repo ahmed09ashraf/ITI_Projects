@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: grid;
+            /* height: 1000px; */
+            grid-template-areas: 
+            "head head head head"
+            "nav main main nav2"
+            "nav main main nav2"
+            "nav main main nav2"
+            "nav main main nav2"
+            "foot foot foot foot"
+            ;
+
+        }
+        header{
+            background-color: brown;
+            grid-area: head;
+        }
+        nav{
+            background-color: blue;
+            grid-area: nav;
+        }
+        .nav{
+            background-color: blue;
+            grid-area: nav2;
+        }
+        main{
+            background-color: burlywood;
+            grid-area: main;
+        }
+        footer{
+            background-color: aquamarine;
+            grid-area: foot;
+        }
+
+
+        @media (max-width:599.99999999px){
+            body{
+                background-color: aquamarine;
+            }
+            footer{
+                background-color: brown;
+            }
+        }
+        @media (min-width:600px) and (max-width:799.99999px){
+            body{
+                background-color: blue;
+            }
+        }
+        @media (min-width:800px) and (max-width:999.99999px){
+            body{
+                background-color: yellow;
+            }
+        }
+        @media (min-width:1000px){
+            body{
+                background-color: red;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <header>header</header>
+        <nav>nav</nav>
+        <nav class="nav">nav</nav>
+        <main>main</main>
+        <footer>footer</footer>
+    </section>
+</body>
+</html>

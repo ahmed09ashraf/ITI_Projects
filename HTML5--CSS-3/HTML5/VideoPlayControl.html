@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Task</title>
+  </head>
+  <body>
+
+
+    <style>
+
+      body{
+        display: flex;
+        justify-content: center;
+        
+      }
+
+      .container {
+          display: flex;
+          border:10px solid black ;
+          width : 700px ;
+          flex-direction: column;
+          align-items: center;
+          
+      }
+      
+      .btns {
+          padding: 15px;
+        }
+        button{
+          padding: 8px ;
+          font-weight: bold;
+          cursor: pointer;
+      }
+      
+      #play{
+          background-color: green;
+          border-radius: 10px ;
+      
+      }
+      
+      #stop{
+          background-color: red;
+          border-radius: 10px ;
+        
+      }
+      
+      #mute{
+          background-color: rgb(83, 83, 83);
+        
+      }
+      
+      #vol{
+          background-color: blue;
+          
+      }
+      
+      .speed {
+          display:block ;
+          width:250px;
+          margin:10px ;
+          border:2px solid black ;
+          border-radius: 20px;
+          background-color: brown;
+          cursor: pointer ;
+      }
+      
+      </style>
+      <div class="container">
+    <video
+    id="video"
+    width="500"
+    preload="auto"
+  >
+    <source src="Neymar . CR7.Messi.avi" />
+  </video>
+    <div class="btns">
+      <input
+      style="width: 500px"
+      type="range"
+      id="playback"
+      min="0"
+      max="100"
+      value="0"
+    />
+    <button id="fullscreen">fullscreen</button>
+
+
+      <br>
+      <button id="play">||</button>
+      <button id="stop">--</button>
+      <button id="back10sec"><<</button>
+      <button id="back5sec"><</button>
+      <button id="forward5sec">></button>
+      <button id="forward10sec">>></button>
+      <button id="mute">mute</button>
+      <input type="range" id="sound" min="0" max="100" value="50" />
+      speed:
+      <input type="range" min=".1" max="2.5" value="1" id="speed" />
+      
+      <br />
+
+    </div>
+    
+
+  </div>
+
+    <script>
+
+      var video = document.querySelector("#video");
+      var play = document.querySelector("#play");
+      var stop = document.querySelector("#stop");
+      var back10sec = document.querySelector("#back10sec");
+      var back5sec = document.querySelector("#back5sec");
+      var forward5sec = document.querySelector("#forward5sec");
+      var forward10sec = document.querySelector("#forward10sec");
+      var sound = document.querySelector("#sound");
+      var mute = document.querySelector("#mute");
+      var speed = document.querySelector("#speed");
+      var playback = document.querySelector("#playback");
+      var playbackCurrent = document.querySelector(".playback-current");
+      var playbackEnd = document.querySelector(".playback-end");
+      var fullscreen = document.querySelector("#fullscreen");
+
+      function setDuration(timeInSec) {
+        var min = Math.floor(timeInSec / 60);
+        var sec = Math.floor(timeInSec - min * 60);
+
+        var videoDuration = `${min}:${sec}`;
+
+        return videoDuration;
+      }
+
+      setTimeout(() => {
+        var videoInSec = video.duration;
+
+        playbackEnd.innerText = setDuration(videoInSec);
+
+        playback.setAttribute("max", videoInSec);
+      }, 200);
+
+      playback.addEventListener("change", () => {
+        video.currentTime = playback.value;
+        playbackCurrent.innerText = setDuration(video.currentTime);
+      });
+
+      video.addEventListener("timeupdate", () => {
+        playbackCurrent.innerText = setDuration(video.currentTime);
+        playback.value = video.currentTime;
+      });
+
+      play.addEventListener("click", () => {
+        video.play() ;
+      });
+
+      stop.addEventListener("click", () => {
+        video.pause();
+        speed.value = 1;
+        video.playbackRate = 1;
+      });
+
+      mute.addEventListener("click", () => {
+        video.muted = !video.muted;
+      });
+
+      speed.addEventListener("change", () => {
+        video.playbackRate = speed.value;
+      });
+
+      sound.addEventListener("change", () => {
+        video.volume = sound.value / 100;
+      });
+
+      forward10sec.addEventListener("click", () => {
+        video.currentTime = video.currentTime + 10;
+      });
+
+      back10sec.addEventListener("click", () => {
+        video.currentTime = video.currentTime - 10;
+      });
+
+      forward5sec.addEventListener("click", () => {
+        video.currentTime = video.currentTime + 5;
+      });
+
+      back5sec.addEventListener("click", () => {
+        video.currentTime = video.currentTime - 5;
+      });
+
+      fullscreen.addEventListener("click", () => {
+        if (video.requestFullscreen) {
+          video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+          /* Safari */
+          video.webkitRequestFullscreen();
+        } else if (video.msRequestFullscreen) {
+          /* IE11 */
+          video.msRequestFullscreen();
+        }
+      });
+    </script>
+  </body>
+</html>

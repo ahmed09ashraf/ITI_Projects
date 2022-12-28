@@ -1,0 +1,92 @@
+
+/* ------------------Navigation Bar Styee---------------------- */
+.bar  {
+    border: red;
+    float: left;
+    font-size: 20px;
+    display: inline-block;
+    width: calc(92% - 150px);
+    padding-left: 0px;
+}
+nav{
+    border: solid black 1px;
+    background-color: black;
+    height: 70px;
+
+}
+.home{
+    font-family:Arial, Helvetica, sans-serif;
+    display:inline-block;
+    vertical-align: top;
+    padding: 5px; 
+    margin-right: 40px;
+    margin-left : 20px ;
+  
+}
+ ul li a{
+text-decoration: none;
+color: white;
+display: inline-block;
+ }  
+
+.home:hover{
+    background-color: brown;
+    height: 30px;
+    stop-color: blue;
+    
+}
+.logo {
+   
+    width: 130px;
+    height: auto;
+    margin-top: -3px;
+
+}
+
+/*------------------------ Registration Form------------------------ */
+
+.bordReg {
+    border: 5px solid mediumseagreen;
+    border-width: 2px ;
+    padding:10px ;
+    
+    }
+.hedo {
+        font-style: bold;
+        color: mediumseagreen;
+        font-size:35px ;
+        text-align: left;
+        border: hidden mediumseagreen;
+        padding: 10px;
+    }
+
+.Reghead {
+    font-size: 25px;
+    font-style:bold ;
+    font-family: Arial, Helvetica, sans-serif;
+    border: dashed 2px mediumseagreen ;
+    background: rgba(128, 128, 128, 0.349);
+    margin-bottom: 20px;
+}
+
+.Rcolor{
+        background-color: mediumseagreen;
+        width: 500px;
+        text-align: right;
+}
+
+
+/* --------------------RoadMap Page------------------- */
+.left , .right  {
+    display: inline-block;
+    width: 40%;
+}
+
+
+footer{
+    color: aliceblue;
+    background-color: black;
+    height: 50px;
+    text-align:center;
+    padding-top: 5px;
+}

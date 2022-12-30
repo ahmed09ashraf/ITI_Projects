@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rabbit</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.2.min.js"
+      integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+      integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 7rem 2rem 1rem;
+      }
+
+      .rabbit {
+        cursor: pointer;
+      }
+      .black-hole{
+        border:10px solid black ;
+        width: 300px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="hole.png"
+        alt="blackhole"
+        width="300px"
+        class="black-hole"
+      />
+
+      <img src="rabbit.jpg" alt="rabbit" width="150" class="rabbit" />
+    </div>
+
+    <script type="text/javascript">
+
+
+      $(".rabbit").on("click" , function(){
+      $(".black-hole").on("mouseenter", function(){
+         $(".rabbit").hide() });
+      })
+      
+      $(".rabbit").draggable({ revert: true });
+      
+      $(".black-hole").on("click", () => $(".rabbit").show())
+
+    </script>
+  </body>
+</html>

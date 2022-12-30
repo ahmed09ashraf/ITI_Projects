@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<style>
+
+/* ----------------------------Task 1 ---------------------------- */
+.task1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .task1 .img-wrapper {
+    display: flex;
+    justify-content: center;
+    }
+
+    .task1 img {
+    width: 250px;
+    height: 300px;
+    object-fit: contain;
+    display: none;
+    border: 1px solid black;
+    }
+
+    .task1 img.active {
+    display: block;
+    }
+
+    .task1 button {
+    cursor: pointer;
+    background-color: blueviolet;
+    color: aliceblue;
+    border: 0;
+    }
+
+/* ============================================================================================= */
+
+/* ----------------------------Task 2 ---------------------------- */
+
+.container {
+        display: flex;
+        align-items: center ;
+        justify-content: space-around;
+        width: 100%;
+        padding: 10px ;
+    }
+
+    div{
+        width : 12% ;
+        height :500px ;
+    }
+    
+    p{    
+        
+        background-color: aquamarine;
+        border:1px grey solid ;
+        padding :10px ;
+        display: none;
+    }
+
+    img{
+        height: 200px ;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        cursor: pointer;
+    }
+
+
+
+</style>
+</head>
+
+<body> 
+
+<!-- ---------------------- Task 1 ----------------------     -->
+
+    <section class="task1">
+
+        <div class="img-wrapper">
+            <img class="active" src="1.jpg" alt="iceman" />
+            <img src="3.jpg" alt="iceman" />
+            <img src="4.jpg" alt="iceman" />
+            <img src="5.jpg" alt="iceman" />
+            <img src="6.jpg" alt="iceman" />
+            <img src="7.jpg" alt="iceman" />
+            <img src="8.jpg" alt="iceman" />
+        </div>
+
+        <button>Stop</button>
+    </section> <br><br><hr>
+<!-- ================================================================================================== -->
+
+<!-- ---------------------- Task 2 ----------------------     -->
+
+    <div class="container">
+
+        <div class="logo1">   
+            <img src="6.jpg" ><br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing eli class="slide"t. 
+                Praesentium sint deleniti consectetur ad natus distinctio dignissimos sapiente 
+                minus laboriosam ea sed voluptates ab adipisci voluptatem, tempore necessitatibus 
+                sequi dolorum beatae?</p>
+        </div>
+
+        <div class="logo2">  
+            <img src="4.jpg" ><br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing eli class="slide"t. 
+                Praesentium sint deleniti consectetur ad natus distinctio dignissimos sapiente 
+                minus laboriosam ea sed voluptates ab adipisci voluptatem, tempore necessitatibus 
+                sequi dolorum beatae?</p>
+                </div> 
+
+        <div class="logo3">
+            <img src="1.jpg" ><br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing eli class="slide"t. 
+                Praesentium sint deleniti consectetur ad natus distinctio dignissimos sapiente 
+                minus laboriosam ea sed voluptates ab adipisci voluptatem, tempore necessitatibus 
+                sequi dolorum beatae?</p>
+            
+        </div>
+    </div>
+
+
+<script
+    src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous">
+</script>
+
+<script src="./query.js"></script>
+
+</body>
+</html>

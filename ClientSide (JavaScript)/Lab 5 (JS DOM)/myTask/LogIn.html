@@ -4,66 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
     <title>Login</title>
 </head>
 <body>
 
-  <!-- --------------- Style of block of logging ---------------- -->
-    <style>
-
-body{
-    background-color: rgb(4, 207, 95);
-    display :flex ;
-    justify-content: center ;
-    flex-direction: column;
-    align-items: center;
-}
-
-.container{
-    width : 500px ;
-    height: 500px ;
-    display: flex;
-    flex-direction: column ;
-    justify-content: space-evenly;
-    align-items: center;
-    border: 5px black solid ;
-    background-color: antiquewhite;
-    border-radius: 10%;
-}
-
-.container input    {
-    border :5px solid black ; 
-    background-color: rgb(206, 206, 206); 
-    padding: 10px ;
-    margin : 10px ;
-    width : 75% ;
-    height: 30px ;
-    font-size: 24px;
-}
-
-.container .btn {
-    background-color: rgb(4, 207, 95);
-    height: 10%;
-    width : 75% ;
-    border-radius: 5%;
-    cursor:pointer;
-}
-
-.btn:hover{
-                background-color: rgb(58, 55, 55); }
-
-#output {
-                width: 600px;
-                margin: 10px;
-                height: 70px;
-                color: white;
-                font-size: 30px;
-                line-height: 70px;
-                padding: 10px;
-                border-radius: 20px;
-                text-align: center;
-            }
-    </style>
 
 
     <form class="container" >
@@ -77,48 +22,6 @@ body{
 
 
 
-  <!-- --------------- Action of logging ---------------- -->
-        <script>
-
-function Log()
-                            {    
-                                var usernameInput  = document.getElementById("userName");
-                                var passwordInput  = document.getElementById("passwd");
-                                var out            = document.getElementById("output");
-
-                    var username= usernameInput.value ;
-                    var pass    =passwordInput.value
-                    
-                                if((username == "ahmed") && (pass == "123")){
-                                    //alert("Welcome login success");
-                                    out.style.backgroundColor = "Green";
-                                    out.innerHTML = "Welcome login success";
-                                    usernameInput.style.border ="green 5px solid"
-                                    passwordInput.style.border ="green 5px solid"
-                                }
-                                else if((username != "ahmed") && (pass == "123")){
-                                    //alert("Error || Incorrect Username");
-                                    out.style.backgroundColor = "red";
-                                    out.innerHTML = "Error || Incorrect Username";
-                                    usernameInput.style.border ="red 5px dashed"
-                                    passwordInput.style.border ="green 5px solid"
-                                }
-                                else if((username == "ahmed") && (pass != "123")){
-                                    //alert("Error || Incorrect Password");
-                                    out.style.backgroundColor = "red";
-                                    out.innerHTML = "Error || Incorrect Password";
-                                    passwordInput.style.border ="red 5px dashed" ;
-                                    usernameInput.style.border ="green 5px solid"
-                                }
-                                else{
-                                    //alert("Error || Incorrect Username and Password");
-                                    out.style.backgroundColor = "red";
-                                    out.innerHTML = "Error || Incorrect Username and Password";
-                                    usernameInput.style.border ="red 5px dashed"
-                                    passwordInput.style.border ="red 5px dashed"
-                                }
-                            }
-
-        </script>
+<script src="Login.js"></script>
     </body>
 </html>

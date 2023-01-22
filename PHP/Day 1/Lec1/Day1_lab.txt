@@ -1,0 +1,16 @@
+-	Show your phpinfo on browser.
+
+-   Use constant to display your website name which mustn’t change across your pages.
+
+-   Show your server name, address, port,filename and path of the currently executing script.
+
+-   Display the output of for,while,do while and foreach fn code from demo file   
+
+-   Your brother is 10 years old, If you know that :
+    age less than 5 --> Print Msg --> Stay at home,
+    age equal 5 --> Print Msg --> Go to Kindergarden,
+    age between 6 & 12 --> Print Msg --> Go to grade :XXX
+    (Use switch case).
+
+
+

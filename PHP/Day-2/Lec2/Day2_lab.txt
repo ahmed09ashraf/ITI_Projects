@@ -1,0 +1,28 @@
+1-  Search for how to make \n work in browser.
+
+2-  Search for 3 built-in function of a string.
+
+3-  Write a PHP script to get the sum and avg of an indexed array
+with value = 45 in index =1
+with value = 12 in index =0
+with value = 25 in index =3
+with value = 10 in index =2
+after that sort it in a reverse order (highest to lowest).
+
+4-  Write a PHP script to sort the following associative array :
+
+array("Sara"=>31,"John"=>41,"Walaa"=>39,"Ramy"=>40) in
+a) ascending order sort by value
+b) ascending order sort by Key
+c) descending order sorting by Value
+d) descending order sorting by Key  
+
+5- Display the following array in an HTML table with Name, Email and Status table headers.
+Specify PHP status with red color.
+    $students = [
+        ['name' => 'Alaa', 'email' => 'alaa@test.com', 'status' => 'PHP'],
+        ['name' => 'Shamy', 'email' => 'shamy@test.com', 'status' => '.Net'],
+        ['name' => 'Youssef', 'email' => 'youssef@test.com', 'status' => 'Testing'],
+        ['name' => 'Waleid', 'email' => 'waleid@test.com', 'status' => 'PHP'],
+        ['name' => 'Rahma', 'email' => 'rahma@test.com', 'status' => 'Front End'],
+    ];
